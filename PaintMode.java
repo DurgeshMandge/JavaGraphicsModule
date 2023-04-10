@@ -1,20 +1,21 @@
 // Demonstrate PaintMode
 
 import java.awt.*;
-import java.awt.event.*;
-import java.awt.geom.*;
 import javax.swing.*;
 
 public class PaintMode {
 
     public static void main(String[] args) {
+        
         PaintMode o = new PaintMode();
         PaintModeFrame f = o.new PaintModeFrame() ;
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     class PaintModeFrame extends JFrame {
+        
         public PaintModeFrame () {
+            
             setTitle("Paint Mode Title");
             setSize(500,500);
             setVisible(true);
@@ -27,8 +28,11 @@ public class PaintMode {
     }
 
     class PaintModePanel extends JPanel {
+        
         int chsX=100, chsY=100;
+        
         @Override
+        
         public void paintComponent (Graphics g) {
             g.drawLine(0,0,100,100);
             g.drawLine(0,100,100,0);
